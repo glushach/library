@@ -24,4 +24,6 @@ $('div').click(function() {
 // console.log($('div').eq(2).find('.some'));
 // console.log($('.some').closest('.findmef').addClass('.dsfsd')); //поиск ближайшего блока findme от some
 
-console.log($('.findme').siblings());
+// console.log($('.findme').siblings());
+
+$('button').fadeIn(1000);

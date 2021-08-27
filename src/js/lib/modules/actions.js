@@ -34,7 +34,7 @@ $.prototype.index = function() {
 
     const findMyIndex = (item) => {
         return item == this[0];
-    }
+    };
 
     return childs.findIndex(findMyIndex);
 };
@@ -75,7 +75,6 @@ $.prototype.closest = function(selector) {
     let counter = 0;
 
     for (let i = 0; i < this.length; i++) {
-        console.log(selector)
         if (this[i].closest(selector) === null) {
             return this; //если ближайший блок не найден, то вернуть блок от которого шел поиск
         } else {
@@ -116,7 +115,7 @@ $.prototype.siblings = function() {
     }
 
     this.length = numberOfItems;
-    
+
     const objLength = Object.keys(this).length;
     for(; numberOfItems < objLength; numberOfItems++) {
         delete this[numberOfItems];
