@@ -1,29 +1,14 @@
 import $ from './lib/lib';
 
-$('button').on('click', function() {
-    $('div').eq(2).toggleClass('active');
+$('#first').on('click', () => {
+    $('div').eq(1).fadeOut(800);
 });
 
-const type = $('button').getAttr('type');
-// console.log(type); //значение атрибута в консоль;
-
-$('button').setAttr('id', 'button'); //установка элементу нового id;
-
-$('div').removeAttr('style'); //удаление атрибута у элемента
-
-$('button').toggleAttr('dir', 'rtl'); //карусель атрибута
-
-
-// console.log($('button').html('Hello'));
-
-
-$('div').click(function() {
-    console.log($(this).index());
+$('[data-count="second"]').on('click', () => {
+    $('div').eq(2).fadeOut(800);
 });
 
-// console.log($('div').eq(2).find('.some'));
-// console.log($('.some').closest('.findmef').addClass('.dsfsd')); //поиск ближайшего блока findme от some
+$('button').eq(2).on('click', () => {
+    $('.w-500').fadeOut(800);
+})
 
-// console.log($('.findme').siblings());
-
-$('button').fadeIn(1000);

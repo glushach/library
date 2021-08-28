@@ -576,25 +576,15 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.click = function (handle
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/lib */ "./src/js/lib/lib.js");
 
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').on('click', function () {
-  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(2).toggleClass('active');
+Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('#first').on('click', () => {
+  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(1).fadeOut(800);
 });
-const type = Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').getAttr('type'); // console.log(type); //значение атрибута в консоль;
-
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').setAttr('id', 'button'); //установка элементу нового id;
-
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').removeAttr('style'); //удаление атрибута у элемента
-
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').toggleAttr('dir', 'rtl'); //карусель атрибута
-// console.log($('button').html('Hello'));
-
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').click(function () {
-  console.log(Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])(this).index());
-}); // console.log($('div').eq(2).find('.some'));
-// console.log($('.some').closest('.findmef').addClass('.dsfsd')); //поиск ближайшего блока findme от some
-// console.log($('.findme').siblings());
-
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').fadeIn(1000);
+Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-count="second"]').on('click', () => {
+  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(2).fadeOut(800);
+});
+Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').eq(2).on('click', () => {
+  Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.w-500').fadeOut(800);
+});
 
 /***/ })
 
