@@ -15,7 +15,7 @@ $('button').eq(2).on('click', () => {
 $('.wrap').html(
     `
     <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
+        <button class="btn btn-primary dropdown-toggle-js" id="dropdownMenuButton">Dropdown button</button>
         <div class="dropdown-menu" data-toggle-id="dropdownMenuButton">
             <a href="#" class="dropdown-item">Action #1</a>
             <a href="#" class="dropdown-item">Action #2</a>
@@ -24,7 +24,7 @@ $('.wrap').html(
     </div>
     `
 );
-$('.dropdown-toggle').dropdown();
+$('.dropdown-toggle-js').dropdown();
 
 $('#trigger').click(() => $('#trigger').createModal({
     text: {
