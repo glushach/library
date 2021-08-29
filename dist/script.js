@@ -178,15 +178,17 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.createModal = function (
     const buttons = [];
 
     for (let j = 0; j < btns.count; j++) {
-      let btn = document.createElement('button');
-      btn.classList.add('btn', ...btns.settings[j][1]);
-      btn.textContent = btns.settings[j][0];
+      let [text, className, close, cb] = btns.settings[j]; //деструктуризация массива
 
-      if (btns.settings[j][2]) {
+      let btn = document.createElement('button');
+      btn.classList.add('btn', ...className);
+      btn.textContent = text;
+
+      if (close) {
         btn.setAttribute('data-close', 'true');
       }
 
-      if (btns.settings[j][3] && typeof (btns.settings[j][3] === 'function')) {
+      if (cb && typeof (btns.settings[j][3] === 'function')) {
         btn.addEventListener('click', btns.settings[j][3]);
       }
 

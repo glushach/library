@@ -54,13 +54,14 @@ $.prototype.createModal = function({text, btns} = {}) {
         // btns = {count: num, settings: [[text, classNames=[], close, cb], []]}
         const buttons = [];
         for (let j = 0; j < btns.count; j++) {
+            let [text, className, close, cb] = btns.settings[j]; //деструктуризация массива
             let btn = document.createElement('button');
-            btn.classList.add('btn', ...btns.settings[j][1]);
-            btn.textContent = btns.settings[j][0];
-            if (btns.settings[j][2]) {
+            btn.classList.add('btn', ...className);
+            btn.textContent = text;
+            if (close) {
                 btn.setAttribute('data-close', 'true');
             }
-            if (btns.settings[j][3] && typeof(btns.settings[j][3] === 'function')) {
+            if (cb && typeof(btns.settings[j][3] === 'function')) {
                 btn.addEventListener('click', btns.settings[j][3]);
             }
             buttons.push(btn);
